@@ -3,7 +3,7 @@
 /**
  * puts - To print the string below
  *
- * main: Entry
+ * main - Entry point
  *
  * Description: Print programming is like building a multilingual puzzle
  *
