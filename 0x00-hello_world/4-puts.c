@@ -1,7 +1,10 @@
 #include <stdio.h>
-/*
- * Main: Entry 
+
+/**
+ * main: Entry
+ *
  * Description: Print programming is like building a multilingual puzzle
+ *
  * Return 0 if successful
  */
 int main(void)
