@@ -10,14 +10,9 @@
 
 int main(void)
 {
-	char text[8] = "_putchar";
-	int i = 0;
+	char ch = '_', 'p', 'u', 't', 'c', 'h', 'a', 'r' '\n';
 
-	for (i = 0; i <= 7; i++);
-	{
-		putchar(text[i]);
-	}
-	putchar('\n');
+	putchar(ch);
 
 	return (0);
 }
