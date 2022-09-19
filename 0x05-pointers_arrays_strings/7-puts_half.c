@@ -2,26 +2,27 @@
 #include <stdio.h>
 
 /**
- * puts_half - prints half of a string
- * @str: string
- * Return: void
+ *puts_half - function that prints half of a string, followed by a new line.
+ *
+ *@str: This is the input string
  */
-
 void puts_half(char *str)
 {
-	int i, j, max;
+	int index, half;
 
-	i = 0;
-	while (str[i] != '\0')
+	index = 0;
+	while (str[index] != '\0')
+		index++;
+
+	half = index / 2;
+
+	if (index % 2 == 1)
+		half++;
+
+	while (half < index)
 	{
-		i++;
-	}
-	max = i;
-	j = max / 2;
-	while (j <= max)
-	{
-		_putchar(str[j]);
-		j++;
+		_putchar(str[half]);
+		half++;
 	}
 	_putchar('\n');
 }

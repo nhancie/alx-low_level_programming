@@ -2,24 +2,24 @@
 #include <stdio.h>
 
 /**
- * print_rev - prints string backwards
- * @s: string
- * Return: void
- */
-
-void print_rev(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	i--;
-	while (i >= 0)
-	{
-		_putchar(s[i]);
-		i--;
-	}
-	_putchar('\n');
-}
+  5  * print_rev - prints string backwards
+  6  * @s: string
+  7  * Return: void
+  8  */
+  9
+ 10 void print_rev(char *s)
+ 11 {
+ 12         int i = 0;
+ 13
+ 14         while (s[i] != '\0')
+ 15         {
+ 16                 i++;
+ 17         }
+ 18         i--;
+ 19         while (i >= 0)
+ 20         {
+ 21                 _putchar(s[i]);
+ 22                 i--;
+ 23         }
+ 24         _putchar('\n');
+ 25 }
