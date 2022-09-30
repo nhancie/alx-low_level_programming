@@ -3,72 +3,47 @@
 #include <stdlib.h>
 
 /**
- * make_change - finds least number of coins
- * @n: money amount
- * Return: number of coins
+ * main - Prints coints left
+ * @args: Paramater Entry
+ * @argv: One number of argumets
+ * Return: zero onOne number of argumetsr
  */
 
-int make_change(int n)
+int main(int args, char *argv[])
 {
-	int coins, quarters, dimes, nickels, twocents, pennies;
+	int  c, coins = 0;
 
-	coins = 0;
-	quarters = 0;
-	dimes = 0;
-	nickels = 0;
-	twocents = 0;
-	pennies = 0;
-
-	while (n > 0)
-	{
-		if (n >= 25)
-		{
-			n -= 25;
-			quarters += 1;
-		}
-		else if (n >= 10)
-		{
-			n -= 10;
-			dimes += 1;
-		}
-		else if (n >= 5)
-		{
-			n -= 5;
-			nickels += 1;
-		}
-		else if (n >= 2)
-		{
-			n -= 2;
-			twocents += 1;
-		}
-		else
-		{
-			n -= 1;
-			pennies += 1;
-		}
-	}
-	coins = quarters + dimes + nickels + twocents + pennies;
-
-	return (coins);
-}
-
-/**
- * main - prints minimum number of coins to make change
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: (0)
- */
-
-int main(int argc, char *argv[])
-{
-	int coins;
-
-	if (argc != 2)
+	if (args != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else if (atoi(argv[1]) < 0)
+	c = atoi(argv[1]);
+	if (c < 0)
 	{
 		printf("0\n");
+		return (0);
+	}
+	for (; c >= 0;)
+	{
+		if (c >= 25)
+			c -= 25;
 
+		else if (c >= 10)
+			c -= 10;
+
+		else if (c >= 5)
+			c -= 5;
+
+		else if (c >= 2)
+			c -= 2;
+
+		else if (c >= 1)
+			c -= 1;
+		else
+			break;
+		coins += 1;
+	}
+	printf("%d\n", coins);
+	return (0);
+}
